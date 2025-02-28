@@ -4,8 +4,8 @@
 One API reactive endpoint **`GET /users//by-external-id`** to get exist user from Postgres DB or by call external service that's providing a new User emulating external system call.
 
 ## Requirements
-- **Java 17**
-- **Maven 3**
+- **Java 21**
+- **Gradle**
 - **Docker** (for containerization)
 
 ## How to Run
@@ -23,6 +23,6 @@ One API reactive endpoint **`GET /users//by-external-id`** to get exist user fro
    ./gradlew bootRun
    ```
    
-## Now can call API endpoint
+## Now can be called API endpoint to get users
 **`http://localhost:8080/users/by-external-id`**
 Randomly NotFound and ServiceUnavailable responses would be appeared.
