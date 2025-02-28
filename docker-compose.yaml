@@ -1,0 +1,10 @@
+services:
+
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: re_pg
+      POSTGRES_USER: re_usr
+      POSTGRES_PASSWORD: re_pwd
+    ports:
+      - 25432:5432

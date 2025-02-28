@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ReactiveEndpoint
+
+  r2dbc:
+    username: re_usr
+    password: re_pwd
+    url: r2dbc:postgresql://localhost:25432/re_pg
+
+  liquibase:
+    url: jdbc:postgresql://localhost:25432/re_pg
+    user: ${spring.r2dbc.username}
+    password: ${spring.r2dbc.password}
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+logging:
+  level:
+    org.springframework.data.r2dbc: debug
